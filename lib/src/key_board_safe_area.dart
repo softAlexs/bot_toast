@@ -11,7 +11,8 @@ class KeyBoardSafeArea extends StatelessWidget {
   Widget build(BuildContext context) {
     MediaQueryData data= MediaQuery.of(context,nullOk: true);
     return Padding(
-      padding: EdgeInsets.only(bottom: (data!=null?data.viewInsets.bottom:0.0)),
+      // padding: EdgeInsets.only(bottom: (data!=null?data.viewInsets.bottom:0.0)),
+      padding: EdgeInsets.only(bottom: 0.0),
       child: child,
     );
   }
