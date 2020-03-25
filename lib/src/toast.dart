@@ -719,8 +719,8 @@ class BotToast {
         groupKey: groupKey,
         key: key,
         toastBuilder: (_) {
-          // return KeyBoardSafeArea(
-            return ProxyDispose(disposeCallback: () {
+          return KeyBoardSafeArea(
+            child: ProxyDispose(disposeCallback: () {
               cache.remove(dismissFunc);
               if (observerProxy != null) {
                 BotToastNavigatorObserver.unregister(observerProxy);
@@ -753,8 +753,8 @@ class BotToast {
               return warpWidget != null
                   ? warpWidget(dismissFunc, child)
                   : child;
-            }));
-          // );
+            })),
+          );
         });
 
     return dismissFunc;
